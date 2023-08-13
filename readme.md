@@ -1,4 +1,4 @@
-python3.6, pydicom2.3.1m  cv2, matplotlib
+python3.6, pydicom2.3.1, cv2, matplotlib
 
 python app.py 
 
