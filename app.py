@@ -426,9 +426,9 @@ def main(mode, dcm_path, img_folder_path):
     start_time = datetime.datetime.now()
     if mode == "show_tag":
         result = show_dicom_tag(dcm_path)
-    elif mode == "convert_img":
+    elif mode == "dcm_2_jpg":
         result = dcm_to_img(dcm_path)
-    elif mode == "convert_dcm":
+    elif mode == "jpg_2_dcm":
         if not img_folder_path:
             return "img_folder_path can not None"
         result = img_to_dicom_frames_compression_rewrite(dcm_path, img_folder_path)
@@ -452,6 +452,6 @@ if __name__ == "__main__":
         print(main(mode, dcm_path, img_folder_path))
     else:
         print("\n arg: \n"\
-                "   mode: show_tag, convert_img, convert_dcm, convert_all \n"\
+                "   mode: show_tag, dcm_2_jpg, jpg_2_dcm, convert_all \n"\
                 "   dcm_path: dicom file path \n"\
-                "   img_folder_path: if mode = convert_dcm, add arg img_folder_path \n")
+                "   img_folder_path: if mode = jpg_2_dcm, add arg img_folder_path \n")
